@@ -98,6 +98,13 @@ const handleSubmit = () => {
       </div>
     </div>
 
+
+    <div class="form_group">
+      <label>반려동물 카드 등록</label>
+      <input type="button" value="반려동물 카드 선택" class="card_button" />
+    </div>
+
+
     <!-- 버튼 영역 -->
     <div class="actions">
       <button @click="handleCancel" class="cancel">취소</button>
@@ -117,7 +124,6 @@ const handleSubmit = () => {
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-
 
 
 .section_title {
@@ -180,6 +186,7 @@ input[type="file"] {
   margin-top: 10px;
 }
 
+
 .preview {
   width: 100px;
   height: 100px;
@@ -193,6 +200,10 @@ input[type="file"] {
   justify-content: center;
   gap: 16px;
   margin-top: 30px;
+}
+
+.card_button {
+  width: 130px;
 }
 
 button {
