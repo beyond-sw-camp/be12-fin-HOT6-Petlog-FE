@@ -45,11 +45,14 @@ export const useChatStore = defineStore("chat", {
     bindSocketEvents() {
   if (!this.socketClient) return;
 
+  const store = this;
+
   this.socketClient.off("chat-message");
 
   this.socketClient.on("chat-message", (msg) => {
     console.log("수신 메시지:", msg);
-    this.messages.push(msg);
+    
+    store.messages.push(msg);
   });
 
   this.socketClient.off("disconnect");

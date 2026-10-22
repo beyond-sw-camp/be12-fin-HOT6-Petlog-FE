@@ -3,7 +3,12 @@
     <button class="chatroom-pet-icon" @click="$emit('open-pet-modal')">
       <img src="../../../assets/icons/sendpetcard.svg" alt="펫 버튼" />
     </button>
-    <input v-model="message" @keyup.enter="send" type="text" placeholder="메시지 입력" />
+    <input
+      v-model="message"
+      @keyup.enter="send"
+      type="text"
+      placeholder="메시지 입력"
+    />
     <button class="chatroom-send" @click="send">
       <img src="../../../assets/icons/sendmessage.svg" alt="보내기" />
     </button>
@@ -31,7 +36,7 @@ const send = () => {
     message.value = "";
   }
 
-  console.log(chatStore.messages);
+  // console.log(chatStore.messages);
 };
 </script>
 

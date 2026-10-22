@@ -54,7 +54,7 @@ export const useScheduleStore = defineStore("schedule", {
 
     async getAllSchedule() {
       try {
-        const response = await axios.get("/api/schedule/pet");
+        const response = await axios.get("/api/schedule/pet/1");
         this.plans = response.data.result;
         return response.data;
       } catch (err) {
